@@ -5,5 +5,5 @@ export class Estudiante {
     edad:number;
     carrera:string;
     universidad:string;
-    promedio:DecimalPipe;
+    promedio:number;
 }

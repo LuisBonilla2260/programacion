@@ -1,1 +1,20 @@
-<p>info works!</p>
+<div class="container mt-4">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item" *ngFor="let estudiante of info; let i = index">
+        <h2 class="accordion-header" [id]="'heading' + i">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i" aria-expanded="true" [attr.aria-controls]="'collapse' + i">
+            {{ estudiante.nombre }}
+          </button>
+        </h2>
+        <div [id]="'collapse' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading' + i" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Edad:</strong> {{ estudiante.edad }}<br>
+            <strong>Carrera:</strong> {{ estudiante.carrera }}<br>
+            <strong>Universidad:</strong> {{ estudiante.universidad }}<br>
+            <strong>Promedio:</strong> {{ estudiante.promedio }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
